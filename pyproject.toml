@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-contract-cite"
+version = "0.1.0"
+description = "Add a verbatim regulatory citation layer (GDPR / HIPAA / EHDS / CRA) to open-data-contract-standard (ODCS) contracts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "plusUltra operator" }]
+keywords = [
+    "odcs",
+    "open-data-contract-standard",
+    "bitol",
+    "data-contracts",
+    "gdpr",
+    "hipaa",
+    "ehds",
+    "cra",
+    "compliance",
+    "regulated-data",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build", "twine", "ruff>=0.4", "mypy>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/plusultra-tools/data-contract-cite"
+Issues = "https://github.com/plusultra-tools/data-contract-cite/issues"
+Upstream-ODCS = "https://github.com/bitol-io/open-data-contract-standard"
+
+[project.scripts]
+dc-cite = "data_contract_cite.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+data_contract_cite = ["data/*.yaml", "data/*.yml", "data/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

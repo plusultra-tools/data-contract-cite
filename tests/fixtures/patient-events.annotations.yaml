@@ -1,0 +1,127 @@
+fields:
+  patient.patient_id:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject'); an identifiable natural person is one who can be
+        identified, directly or indirectly, in particular by reference to an identifier
+        such as a name, an identification number, location data, an online identifier or
+        to one or more factors specific to the physical, physiological, genetic, mental,
+        economic, cultural or social identity of that natural person.
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        Medical record numbers — must be removed under the Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+
+  patient.email:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject'); an identifiable natural person is one who can be
+        identified, directly or indirectly, in particular by reference to an identifier
+        such as a name, an identification number, location data, an online identifier or
+        to one or more factors specific to the physical, physiological, genetic, mental,
+        economic, cultural or social identity of that natural person.
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        Electronic mail addresses must be removed under the HIPAA Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+
+  patient.date_of_birth:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject').
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        All elements of dates (except year) for dates directly related to an individual,
+        including birth date, must be removed under the Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+
+  patient.medical_record_number:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject').
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        Medical record numbers must be removed under the HIPAA Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+
+  clinical_event.diagnosis_code:
+    - regulation: GDPR
+      article: "Art. 9(1)"
+      excerpt: >-
+        Processing of personal data revealing racial or ethnic origin, political opinions,
+        religious or philosophical beliefs, or trade union membership, and the processing
+        of genetic data, biometric data for the purpose of uniquely identifying a natural
+        person, data concerning health or data concerning a natural person's sex life or
+        sexual orientation shall be prohibited.
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        Diagnosis codes linked to individuals are PHI and must be protected under HIPAA.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+    - regulation: EHDS
+      article: "Art. 64-72"
+      excerpt: >-
+        Regulation (EU) 2025/327 Arts. 64-72 govern the conditions under which health
+        data access bodies may grant access permits for the secondary use of electronic
+        health data.
+      excerpt_type: paraphrase
+      source_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0327"
+
+  clinical_event.admission_date:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject').
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        All elements of dates directly related to an individual, including admission date,
+        must be removed under the HIPAA Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+
+  clinical_event.discharge_date:
+    - regulation: GDPR
+      article: "Art. 4(1)"
+      excerpt: >-
+        'personal data' means any information relating to an identified or identifiable
+        natural person ('data subject').
+      excerpt_type: verbatim_oj
+      source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - regulation: HIPAA
+      article: "45 CFR §164.514(b)(2)(i)"
+      excerpt: >-
+        All elements of dates directly related to an individual, including discharge date,
+        must be removed under the HIPAA Safe Harbor method.
+      excerpt_type: paraphrase
+      source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"

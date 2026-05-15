@@ -1,0 +1,44 @@
+apiVersion: v3.0.0
+kind: DataContract
+id: patient-events-quickstart
+name: Patient Events Quickstart Example
+status: active
+version: "1.0.0"
+description: >-
+  Quickstart example contract. All data is synthetic.
+owner: data-platform-team
+
+schema:
+  - name: patient
+    description: Core patient identifiers
+    properties:
+      - name: email
+        logicalType: string
+        physicalType: varchar(255)
+        businessName: Email Address
+        pii: true
+        classification: restricted
+        tags: [pii, contact]
+
+      - name: medical_record_number
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Medical Record Number
+        pii: true
+        classification: restricted
+        tags: [phi, identifier]
+
+      - name: diagnosis_code
+        logicalType: string
+        physicalType: varchar(16)
+        businessName: Diagnosis Code
+        pii: true
+        classification: restricted
+        tags: [phi, health-data]
+
+      - name: department
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Department
+        pii: false
+        classification: internal

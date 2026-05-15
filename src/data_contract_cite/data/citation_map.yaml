@@ -1,0 +1,189 @@
+# Bundled regulatory citation map
+# Each entry: regulation + article + excerpt (verbatim or paraphrase) + excerpt_type + source_url
+# excerpt_type: "verbatim_oj" | "verbatim_cfr" | "paraphrase"
+
+citations:
+  - regulation: GDPR
+    article: "Art. 4(1)"
+    title: "Definition of personal data"
+    excerpt: >-
+      'personal data' means any information relating to an identified or identifiable
+      natural person ('data subject'); an identifiable natural person is one who can be
+      identified, directly or indirectly, in particular by reference to an identifier
+      such as a name, an identification number, location data, an online identifier or
+      to one or more factors specific to the physical, physiological, genetic, mental,
+      economic, cultural or social identity of that natural person.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [personal_data, identifier, pii]
+
+  - regulation: GDPR
+    article: "Art. 4(13)"
+    title: "Definition of genetic data"
+    excerpt: >-
+      'genetic data' means personal data relating to the inherited or acquired genetic
+      characteristics of a natural person which give unique information about the
+      physiology or the health of that natural person and which result, in particular,
+      from an analysis of a biological sample from the natural person in question.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [genetic, special_category, pii]
+
+  - regulation: GDPR
+    article: "Art. 4(14)"
+    title: "Definition of biometric data"
+    excerpt: >-
+      'biometric data' means personal data resulting from specific technical processing
+      relating to the physical, physiological or behavioural characteristics of a natural
+      person, which allow or confirm the unique identification of that natural person,
+      such as facial images or dactyloscopic data.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [biometric, special_category, pii]
+
+  - regulation: GDPR
+    article: "Art. 4(15)"
+    title: "Definition of data concerning health"
+    excerpt: >-
+      'data concerning health' means personal data related to the physical or mental
+      health of a natural person, including the provision of health care services, which
+      reveal information about his or her health status.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [health_data, special_category, pii, phi]
+
+  - regulation: GDPR
+    article: "Art. 9(1)"
+    title: "Processing of special categories of personal data — prohibition"
+    excerpt: >-
+      Processing of personal data revealing racial or ethnic origin, political opinions,
+      religious or philosophical beliefs, or trade union membership, and the processing
+      of genetic data, biometric data for the purpose of uniquely identifying a natural
+      person, data concerning health or data concerning a natural person's sex life or
+      sexual orientation shall be prohibited.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [special_category, health_data, genetic, biometric, pii]
+
+  - regulation: GDPR
+    article: "Art. 32"
+    title: "Security of processing"
+    excerpt: >-
+      Taking into account the state of the art, the costs of implementation and the
+      nature, scope, context and purposes of processing as well as the risk of varying
+      likelihood and severity for the rights and freedoms of natural persons, the
+      controller and the processor shall implement appropriate technical and organisational
+      measures to ensure a level of security appropriate to the risk.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [security, technical_measures, pii]
+
+  - regulation: GDPR
+    article: "Art. 33"
+    title: "Notification of personal data breach to supervisory authority"
+    excerpt: >-
+      In the case of a personal data breach, the controller shall without undue delay
+      and, where feasible, not later than 72 hours after having become aware of it,
+      notify the personal data breach to the supervisory authority competent in
+      accordance with Article 55, unless the personal data breach is unlikely to result
+      in a risk to the rights and freedoms of natural persons.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [breach, notification, pii]
+
+  - regulation: GDPR
+    article: "Art. 35"
+    title: "Data protection impact assessment"
+    excerpt: >-
+      Where a type of processing in particular using new technologies, and taking into
+      account the nature, scope, context and purposes of the processing, is likely to
+      result in a high risk to the rights and freedoms of natural persons, the controller
+      shall, prior to the processing, carry out an assessment of the impact of the
+      envisaged processing operations on the protection of personal data.
+    excerpt_type: verbatim_oj
+    source_url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    tags: [dpia, high_risk, pii]
+
+  - regulation: HIPAA
+    article: "45 CFR §164.514(b)(2)(i)"
+    title: "Safe Harbor de-identification — 18 direct identifiers to remove"
+    excerpt: >-
+      The following identifiers of the individual or of relatives, employers, or household
+      members of the individual, are removed: (A) Names; (B) All geographic subdivisions
+      smaller than a State, including street address, city, county, precinct, zip code,
+      and their equivalent geocodes, except for the initial three digits of a zip code
+      if, according to the current publicly available data from the Bureau of the Census:
+      (1) The geographic unit formed by combining all zip codes with the same three
+      initial digits contains more than 20,000 people; and (2) The initial three digits
+      of a zip code for all such geographic units containing 20,000 or fewer people is
+      changed to 000; (C) All elements of dates (except year) for dates directly related
+      to an individual, including birth date, admission date, discharge date, date of
+      death; and all ages over 89 and all elements of dates (including year) indicative
+      of such age, except that such ages and elements may be aggregated into a single
+      category of age 90 or older; (D) Telephone numbers; (E) Fax numbers;
+      (F) Electronic mail addresses; (G) Social security numbers; (H) Medical record
+      numbers; (I) Health plan beneficiary numbers; (J) Account numbers; (K) Certificate/
+      license numbers; (L) Vehicle identifiers and serial numbers, including license plate
+      numbers; (M) Device identifiers and serial numbers; (N) Web Universal Resource
+      Locators (URLs); (O) Internet Protocol (IP) address numbers; (P) Biometric
+      identifiers, including finger and voice prints; (Q) Full-face photographic images
+      and any comparable images; and (R) Any other unique identifying number,
+      characteristic, or code.
+    excerpt_type: verbatim_cfr
+    source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514"
+    tags: [phi, de-identification, safe_harbor, hipaa_identifier]
+
+  - regulation: HIPAA
+    article: "45 CFR §164.312(a)"
+    title: "Technical safeguards — access control"
+    excerpt: >-
+      Implement technical policies and procedures for electronic information systems
+      that maintain electronic protected health information to allow access only to
+      those persons or software programs that have been granted access rights as
+      specified in §164.308(a)(4).
+    excerpt_type: verbatim_cfr
+    source_url: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.312"
+    tags: [phi, technical_safeguards, access_control]
+
+  - regulation: EHDS
+    article: "Art. 64-72"
+    title: "Secondary use of electronic health data — authorised processing"
+    excerpt: >-
+      Regulation (EU) 2025/327 Arts. 64-72 govern the conditions under which health
+      data access bodies may grant access permits for the secondary use of electronic
+      health data for purposes including research, innovation, policy-making, regulatory
+      activities, education, and personalised medicine. Processing must occur in a
+      secure processing environment and subject to data minimisation, purpose limitation,
+      and prohibition on re-identification obligations.
+    excerpt_type: paraphrase
+    source_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0327"
+    tags: [health_data, secondary_use, ehds, phi]
+
+  - regulation: CRA
+    article: "Annex I, Part I"
+    title: "Essential cybersecurity requirements for products with digital elements"
+    excerpt: >-
+      Regulation (EU) 2024/2847 Annex I Part I requires that products with digital
+      elements are designed, developed, and produced in such a way that they ensure
+      an appropriate level of cybersecurity based on the risks, including: protection
+      against unauthorised access; minimal attack surface; protection of data at rest
+      and in transit; security updates; and vulnerability disclosure. Products must not
+      contain known exploitable vulnerabilities and must implement secure-by-default
+      configurations.
+    excerpt_type: paraphrase
+    source_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R2847"
+    tags: [cybersecurity, cra, digital_product]
+
+  - regulation: CRA
+    article: "Art. 14"
+    title: "Obligations of manufacturers — vulnerability handling"
+    excerpt: >-
+      Regulation (EU) 2024/2847 Art. 14 requires manufacturers to handle vulnerabilities
+      effectively for the expected product lifetime or five years, whichever is shorter.
+      This includes establishing and documenting a coordinated vulnerability disclosure
+      policy, taking action to remediate vulnerabilities without undue delay, and
+      providing security updates free of charge. Manufacturers must report actively
+      exploited vulnerabilities to ENISA within 24 hours.
+    excerpt_type: paraphrase
+    source_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R2847"
+    tags: [cybersecurity, vulnerability, cra, manufacturer]

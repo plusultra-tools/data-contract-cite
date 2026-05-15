@@ -1,0 +1,104 @@
+apiVersion: v3.0.0
+kind: DataContract
+id: patient-events-v1
+name: Patient Events Contract
+status: active
+version: "1.0.0"
+description: >-
+  Synthetic patient event data for testing regulatory citation tooling.
+  All values are synthetic and do not represent real individuals.
+owner: data-platform-team
+
+schema:
+  - name: patient
+    description: Core patient identifiers and demographics
+    properties:
+      - name: patient_id
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Patient Identifier
+        description: Internal patient identifier
+        pii: true
+        classification: restricted
+        tags: [identifier, phi]
+
+      - name: email
+        logicalType: string
+        physicalType: varchar(255)
+        businessName: Email Address
+        description: Patient contact email
+        pii: true
+        classification: restricted
+        tags: [contact, pii]
+
+      - name: date_of_birth
+        logicalType: date
+        physicalType: date
+        businessName: Date of Birth
+        description: Patient date of birth
+        pii: true
+        classification: restricted
+        tags: [demographics, phi]
+
+      - name: medical_record_number
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Medical Record Number
+        description: Hospital-issued medical record identifier
+        pii: true
+        classification: restricted
+        tags: [phi, identifier]
+
+      - name: gender
+        logicalType: string
+        physicalType: varchar(16)
+        businessName: Gender
+        description: Reported gender
+        pii: false
+        classification: internal
+        tags: [demographics]
+
+  - name: clinical_event
+    description: Clinical events associated with a patient
+    properties:
+      - name: event_id
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Event Identifier
+        pii: false
+        classification: internal
+
+      - name: diagnosis_code
+        logicalType: string
+        physicalType: varchar(16)
+        businessName: Diagnosis Code
+        description: ICD-10 diagnosis code
+        pii: true
+        classification: restricted
+        tags: [phi, health-data]
+
+      - name: admission_date
+        logicalType: date
+        physicalType: date
+        businessName: Admission Date
+        description: Date of clinical admission
+        pii: true
+        classification: restricted
+        tags: [phi, date]
+
+      - name: discharge_date
+        logicalType: date
+        physicalType: date
+        businessName: Discharge Date
+        description: Date of clinical discharge
+        pii: true
+        classification: restricted
+        tags: [phi, date]
+
+      - name: department
+        logicalType: string
+        physicalType: varchar(64)
+        businessName: Department
+        description: Treating department
+        pii: false
+        classification: internal
